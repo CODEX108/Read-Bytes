@@ -10,7 +10,7 @@ const bodyParser = require('body-parser')
 // hook the index file from routes dir
 const indexRouter = require('./routes/index')
 const authorRouter = require('./routes/authors')
-
+const bookRouter = require('./routes/books')
 
 
 // set our view engine
@@ -38,6 +38,6 @@ db.once('open',()=>console.log('connected to mongoose'))
 
 app.use('/',indexRouter)
 app.use('/authors',authorRouter)
-
+app.use('/books',bookRouter)
 // pull from the env variable 
  app.listen(process.env.PORT || 3000)
