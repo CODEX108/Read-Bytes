@@ -21,7 +21,7 @@ app.set('layout','layouts/layout')
 // tell the app we are gonna use expressLayouts
 app.use(expressLayouts)
 // tell where our public files are
-app.use(express.static('public'))
+app.use(express.static('public'));
 app.use(bodyParser.urlencoded({limit:'10mb',extended:false}))
 
 
