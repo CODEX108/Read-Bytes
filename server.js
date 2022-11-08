@@ -7,6 +7,7 @@ const express = require('express')
 const app = express()
 const expressLayouts = require('express-ejs-layouts')
 const bodyParser = require('body-parser')
+const methodOverride = require('method-override')
 // hook the index file from routes dir
 const indexRouter = require('./routes/index')
 const authorRouter = require('./routes/authors')
@@ -22,6 +23,8 @@ app.set('layout','layouts/layout')
 app.use(expressLayouts)
 // tell where our public files are
 app.use(express.static('public'));
+app.use(methodOverride('_method'))
+
 app.use(bodyParser.urlencoded({limit:'10mb',extended:false}))
 
 
