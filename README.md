@@ -6,3 +6,5 @@ Read bytes is a full stack web app which helps students to get an overview about
 - MongoDb
  - Heroku
  - CSS
+
+The website is not yet responsive
